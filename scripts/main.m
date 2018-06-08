@@ -3,3 +3,7 @@ ukol_2_script
 ukol_3_script
 ukol_4_script
 ukol_5_script
+ukol_6_script
+ukol_7_script
+ukol_8_script
+ukol_9_script
