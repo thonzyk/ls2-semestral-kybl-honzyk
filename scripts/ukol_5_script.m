@@ -33,4 +33,9 @@ plot(simout2)
 title('Step (s integratorem)')
 
 
-
+korekcni_zesileni = 1;
+sim('ukol_5_model_2')
+figure
+plot(simout)
+title('Step (dopredna bez kompenzacniho zesileni)')
+korekcni_zesileni =  (1/0.2845944)*(1/(C_1* inv(pI_A_BK)*B));
