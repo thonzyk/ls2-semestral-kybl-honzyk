@@ -19,7 +19,7 @@ chyboveY = simout.Data(:,3); % výstup zatížený šumem
 regresory = [-y(2:end-1),-y(1:end-2),u(2:end-1),u(1:end-2)]; % matice regresorù
 ChyboveRegresory = [-chyboveY(2:end-1),-chyboveY(1:end-2),u(2:end-1),u(1:end-2)];% matice regresorù pro vstup zatížený šumem
 parametry = pinv(regresory)*y(3:end); % vypoètené parametry pøenosu
-parametrySum = pinv(ChyboveRegresory)*y(3:end); % vypoètené parametry pøenosu pro vstup zatížený šumem
+parametrySum = pinv(ChyboveRegresory)*chyboveY(3:end); % vypoètené parametry pøenosu pro vstup zatížený šumem
 
 prenosova_fce_z_parametru = tf([parametry(3) parametry(4)],[1 parametry(1) parametry(2)], T); % pøenos vypoètených parametrù
 prenosova_fce_z_parametru_se_sumem = tf([parametrySum(3) parametrySum(4)],[1 parametrySum(1) parametrySum(2)], T); % pøenos vypoètených parametrù
