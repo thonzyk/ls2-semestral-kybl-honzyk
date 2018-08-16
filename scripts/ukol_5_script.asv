@@ -1,7 +1,4 @@
 %% Spuštìní celého úkolu 4)
-k1_2 = 0;
-k2_2 = 0;
-kI = 0;
 %% Dopøedná vazba
 A = [0 1; -1.44 -0.36];
 B = [0; 1];
@@ -34,7 +31,7 @@ k2_2 = 2.363;
 kI = 0.523;
 
 
-%% Vykreslení
+%% Vykreslení - dobredna nafejkováno korekèní zesílení -> dodìlat obrázky
 
 sim('ukol_5_model_2')
 
@@ -49,9 +46,9 @@ title('Step (s integratorem)')
 legend('vstup', 'výstup')
 
 figure
-plot(simout3)
-title('Porovnání')
-legend('vstup', 'výstup s dopøedným regulátorem', 'výstup se zpìtnovazebním regulátorem')
+plot(simout2)
+title('Poro')
+legend('vstup', 'výstup')
 
 korekcni_zesileni = 1;
 sim('ukol_5_model_2')

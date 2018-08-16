@@ -16,13 +16,17 @@ polynom =  a_z * c_z + b_z * d_z;
 koeficienty = coeffs(polynom, z);
 
 % ruènì pøepsaná soustava rovnic do maticového tvaru
-Matice_A = [0.1366 0 0 0 -0.9305;
+Matice_A = [0.1366 0 0 0 0;                              % ????
             0.1399 0.1366 0 0 3.69878;
             0 0.1399 0.1366 0 -5.6055;
             0 0 0.1399 0.1366 3.835;
             0 0 0 0.1399 -1];
-Vektor_b = [0 -0.9305 3.69878 -5.6055 3.835]';
+Vektor_b = [-0.9305 -0.9305 3.69878 -5.6055 3.835]';
 Vektor_x = Matice_A\Vektor_b;
+
+% Matice_A = [0.1366 0 0 0 0; 0.1399 0.1366 0 0 3.69878; 0 0.1399 0.1366 0 -5.6055; 0 0 0.1399 0.1366 3.835; 0 0 0 0.1399 -1];
+% Vektor_b = [-0.9305 -0.9305 3.69878 -5.6055 3.835]';
+% Vektor_x = Matice_A\Vektor_b;
 
 % výsledné parametry
 d0 = Vektor_x(1);

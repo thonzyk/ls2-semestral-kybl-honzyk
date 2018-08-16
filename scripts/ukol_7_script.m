@@ -1,13 +1,20 @@
 %% Úkol 7)
 
-Fs_servo_discrete = c2d(Fs_servo, 0.1, 'zoh'); % diskrétni pøenos servosystému
+Fs_servo_discrete = c2d(Fs_servo, 0.1, 'zoh') % diskrétni pøenos servosystému
 
-Ks = (10^5 / 1.188)^(-1); % hodnota urèená vytknutím z pøenosu
+Ks = 1.188e-05; % hodnota urèená vytknutím z pøenosu
 
 syms z c1 c0 Kr
 
 % pøevedení ruènì sestavené soustavy rovnic do maticového tvaru
 Matice_A = [0 1 Ks; 1 -1 3.963*Ks; -1 0 Ks*0.9825];
+Vektor_b = [1 0 0]';
+Vektor_x = Matice_A\Vektor_b;
+
+Matice_A = [0 1 Ks;
+            1 -1 3.963*Ks; 
+           -1 0 Ks*0.9825];
+       
 Vektor_b = [1 0 0]';
 Vektor_x = Matice_A\Vektor_b;
 

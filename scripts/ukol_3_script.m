@@ -36,7 +36,7 @@ Vysledny_prenos_GMK = feedback(Celkovy_otevreny_prenos, 1);
 a1 = (2*epsilon_ideal)/omega_ideal;
 a2 = 1/omega_ideal^2;
 
-Qp = Fs^-1 * tf(1, [a2 a1 1]);
+Qp = Fs^-1 * tf(1, [a2 a1 1])
 
 Fr = Qp / (1 - Qp * Fs);
 
@@ -56,6 +56,11 @@ Kd = Fr2.numerator{1}(1) - Kp*theta;
 Fr2 = tf([(Kp*theta+Kd) (Kp+Ki*theta) Ki], [theta 1 0]);
 
 %% Vykreslení
+
+
+figure
+step(Fs_ideal)
+title('Pøechodová charakteristika ideálního pøenosu')
 
 figure
 step(Vysledny_prenos_GMK)
