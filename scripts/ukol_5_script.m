@@ -52,10 +52,3 @@ figure
 plot(simout3)
 title('Porovnání')
 legend('vstup', 'výstup s dopøedným regulátorem', 'výstup se zpìtnovazebním regulátorem')
-
-korekcni_zesileni = 1;
-sim('ukol_5_model_2')
-figure
-plot(simout)
-title('Step (dopredna bez kompenzacniho zesileni)')
-legend('vstup', 'výstup')

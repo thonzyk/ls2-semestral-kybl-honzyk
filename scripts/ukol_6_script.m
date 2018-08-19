@@ -38,5 +38,5 @@ Fr_6 = tf([d3 d2 d1 d0], [1 -c0-1.96 1+1.96*c0 -c0], 0.2); % výsledný pøenos reg
 figure
 sim('ukol_6_model')
 plot(simout)
-title('Chovani rekulacni smycky')
-legend('referencni signal', 'odezva regulacni smycky')
+title('Chování regulaèní smyèky')
+legend('referenèní signál', 'odezva regulaèní smyèky')

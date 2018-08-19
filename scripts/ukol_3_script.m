@@ -49,10 +49,10 @@ Fr2 = minreal(Fr);
 num = Fr2.numerator{1} * (1.84^(-1));
 den = Fr2.denominator{1} * (1.84^(-1));
 Fr2 = tf(num, den);
-theta = Fr2.denominator{1}(1);
-Ki = Fr2.numerator{1}(3);
-Kp = Fr2.numerator{1}(2) - Ki*theta;
-Kd = Fr2.numerator{1}(1) - Kp*theta;
+theta = Fr2.denominator{1}(1)
+Ki = Fr2.numerator{1}(3)
+Kp = Fr2.numerator{1}(2) - Ki*theta
+Kd = Fr2.numerator{1}(1) - Kp*theta
 Fr2 = tf([(Kp*theta+Kd) (Kp+Ki*theta) Ki], [theta 1 0]);
 
 %% Vykreslení

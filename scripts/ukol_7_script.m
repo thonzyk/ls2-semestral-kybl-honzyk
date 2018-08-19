@@ -1,6 +1,7 @@
 %% Úkol 7)
+format longE
 
-Fs_servo_discrete = c2d(Fs_servo, 0.1, 'zoh') % diskrétni pøenos servosystému
+Fs_servo_discrete = c2d(Fs_servo, 0.1, 'zoh'); % diskrétni pøenos servosystému
 
 Ks = 1.188e-05; % hodnota urèená vytknutím z pøenosu
 
@@ -14,6 +15,10 @@ Vektor_x = Matice_A\Vektor_b;
 Matice_A = [0 1 Ks;
             1 -1 3.963*Ks; 
            -1 0 Ks*0.9825];
+       
+Matice_A = [0 1 Ks;
+            1 -1 3.96296*Ks; 
+           -1 0 Ks*0.9823];      
        
 Vektor_b = [1 0 0]';
 Vektor_x = Matice_A\Vektor_b;
@@ -30,11 +35,7 @@ sim('ukol_7_model')
 
 %% Vykreslení
 figure
-step(Fs_celkem_7, 0.5)
-title('Step response - detail na zacatek regulace')
-figure
 step(Fs_celkem_7)
-title('Step response - dalsi prubeh regulace')
 figure
 plot(simout)
 title('Prubeh rizeni')

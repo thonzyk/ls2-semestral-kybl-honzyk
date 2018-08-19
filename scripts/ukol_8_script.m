@@ -17,5 +17,8 @@ koeficienty = coeffs(determinant, p);
 
 %% Vykreslení
 
+figure
 sim('ukol_8_model')
 plot(simout)
+title('Step response')
+legend('x1 - skuteèný stav', 'x2 - skuteèný stav', 'x1 - rekonstruovaný stav', 'x2 - rekonstruovaný stav')

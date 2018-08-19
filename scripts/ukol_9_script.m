@@ -12,6 +12,13 @@ k2 = 1.8188;
 
 %% Vykreslení
 
+figure
 sim('ukol_9_model');
 plot(simout)
-legend('step', 'puvodni', 'rekonstruktor')
+legend('vtup (po èástech konstantní funkce)', 'reálnı stav x1', 'rekonstruovanı stav x1')
+title('')
+
+figure
+sim('ukol_9_integr_model');
+plot(simout)
+legend('vtup (po èástech konstantní funkce)', 'reálnı stav x1', 'rekonstruovanı stav x1')
